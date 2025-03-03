@@ -63,8 +63,8 @@ async function userDetails() {
             // Repo Name
             let repoName = document.createElement('td');
             repoName.innerText = repo.name;
-
-
+            
+            
             // Repo Link
             let repoLink = document.createElement('td');
             let repoHref = document.createElement('a');
@@ -72,13 +72,14 @@ async function userDetails() {
             repoHref.target = "_blank";
             repoHref.textContent = repo.name;
             repoLink.appendChild(repoHref);
-
-
+            
+            
             repoRow.appendChild(repoSno);
             repoRow.appendChild(repoID);
             repoRow.appendChild(repoName);
             repoRow.append(repoLink);
-
+            
+            // repoList.style.fontSize = '10px'
             repoList.appendChild(repoRow);
 
 

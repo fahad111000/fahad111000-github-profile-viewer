@@ -1,0 +1,8 @@
+@media (425px <=width <=650px) {
+    
+    .input-container {
+        width: 80%;
+        /* border: 2px solid red; */
+    }
+
+}
