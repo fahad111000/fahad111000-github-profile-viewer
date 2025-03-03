@@ -23,7 +23,7 @@ async function userDetails() {
                 throw new Error(`This ${userName} is Not Found`)
             }
             else {
-                throw new Error(`Something went wrong with the request`)
+                throw new Error(`Server Type of Error`)
             }
         }
 
@@ -43,6 +43,8 @@ async function userDetails() {
                 keepFetching = false;
             }
             else {
+
+                // spread Operator
                 totalRepos = [...totalRepos, ...currentRepo]
                 page++;
             }
@@ -52,7 +54,7 @@ async function userDetails() {
             reposDetails.style.display = "block"
             let repoRow = document.createElement('tr');
 
-            // Repo serial Numbers
+            // Repo serial Numbers++
             let repoSno = document.createElement('td');
             repoSno.innerText = index + 1;
 
@@ -63,8 +65,8 @@ async function userDetails() {
             // Repo Name
             let repoName = document.createElement('td');
             repoName.innerText = repo.name;
-            
-            
+
+
             // Repo Link
             let repoLink = document.createElement('td');
             let repoHref = document.createElement('a');
@@ -72,13 +74,13 @@ async function userDetails() {
             repoHref.target = "_blank";
             repoHref.textContent = repo.name;
             repoLink.appendChild(repoHref);
-            
-            
+
+
             repoRow.appendChild(repoSno);
             repoRow.appendChild(repoID);
             repoRow.appendChild(repoName);
             repoRow.append(repoLink);
-            
+
             // repoList.style.fontSize = '10px'
             repoList.appendChild(repoRow);
 
